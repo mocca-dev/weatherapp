@@ -1,0 +1,15 @@
+<div class="content" role="main">
+  <div class="main-container">
+    <app-today-forecast
+      [forecast]="forecast"
+      [locationName]="locationName"
+    ></app-today-forecast>
+    <br />
+    <app-week-forecast
+      *ngIf="weekForecastTemps"
+      [temps]="weekForecastTemps"
+      [dates]="weekForecastDates"
+      [tempRange]="tempRange"
+    ></app-week-forecast>
+  </div>
+</div>

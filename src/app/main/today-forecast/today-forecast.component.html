@@ -1,0 +1,55 @@
+<div class="today-container">
+  <h3 class="location-name">{{ locationName }}</h3>
+  <div class="temp">
+    <h1 class="temp-number" [ngClass]="{ 'empty-temp': !forecast }">
+      {{ forecast?.the_temp | integerDefault }}
+    </h1>
+    <h1>°</h1>
+  </div>
+  <img
+    *ngIf="forecast?.weather_state_abbr"
+    [src]="
+      'https://www.metaweather.com/static/img/weather/' +
+      forecast?.weather_state_abbr +
+      '.svg'
+    "
+    alt="weather state"
+  />
+  <div class="state-name">
+    {{ forecast?.weather_state_name }}
+  </div>
+  <br />
+  <div>
+    <span
+      ><strong> Max:</strong> {{ forecast?.max_temp | integerDefault }}°</span
+    >/
+    <span
+      ><strong>Min: </strong>{{ forecast?.min_temp | integerDefault }}°</span
+    >
+  </div>
+  <div>
+    <span>
+      <strong> Wind Speed:</strong>
+      {{ forecast?.wind_speed * 1.6 | number: "1.0-1" }} km/h
+    </span>
+    /
+    <span>
+      <strong> Humidity: </strong>{{ forecast?.humidity | integerDefault }}%
+    </span>
+  </div>
+  <div>
+    <span>
+      <strong> Visibility: </strong
+      >{{ forecast?.visibility | integerDefault }} kms
+    </span>
+    /
+    <span>
+      <strong> Pressure: </strong
+      >{{ forecast?.air_pressure | integerDefault }} kms
+    </span>
+  </div>
+  <div>
+    <strong> Confidence: </strong
+    >{{ forecast?.predictability | integerDefault }} %
+  </div>
+</div>

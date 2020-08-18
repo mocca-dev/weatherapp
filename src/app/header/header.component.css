@@ -1,0 +1,51 @@
+.toolbar,
+.sub-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.toolbar {
+  height: 45px;
+  top: 0;
+  background-color: #1976d2;
+  color: white;
+}
+
+.sub-header {
+  top: 45px;
+  padding: 10px 16px;
+  background-color: #eee;
+  font-size: 0.7rem;
+}
+
+.sub-header input {
+  background: none;
+  border: none;
+  width: calc(100% - 1rem);
+}
+
+.toolbar div {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.sub-header button {
+  background: none;
+  border: none;
+}
+
+.sub-header img {
+  height: 1rem;
+}

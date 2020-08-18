@@ -1,0 +1,14 @@
+<header class="toolbar">
+  <div>Nicolás' Weather Forecast</div>
+  <div class="spacer"></div>
+</header>
+<div class="sub-header">
+  <input
+    type="text"
+    [formControl]="locationName"
+    placeholder="Search location..."
+  />
+  <button (click)="search()">
+    <img src="assets/search.svg" />
+  </button>
+</div>
